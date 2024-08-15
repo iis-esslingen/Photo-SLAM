@@ -1,0 +1,10 @@
+{
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "container",
+    "overrideCommand": true,
+    "initializeCommand": [
+        ".devcontainer/initialize_command"
+    ],
+    "workspaceFolder": "/workspace",
+    // "postCreateCommand": "source /SplaTAM/venv/splatam/bin/activate"
+}
