@@ -6,5 +6,7 @@
         ".devcontainer/initialize_command"
     ],
     "workspaceFolder": "/workspace",
-    // "postCreateCommand": "source /SplaTAM/venv/splatam/bin/activate"
+    "runArgs": [
+        "--gpus=all"
+    ]
 }
