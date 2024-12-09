@@ -219,16 +219,16 @@ target_link_libraries(tum_rgbd
     gaussian_mapper
     ${ORB_SLAM3_SOURCE_DIR}/lib/libORB_SLAM3.so)
 
-# Stihl Monocular
-add_executable(stihl_mono examples/stihl_mono.cpp)
-target_link_libraries(stihl_mono
+# ROVER Monocular
+add_executable(rover_mono examples/rover_mono.cpp)
+target_link_libraries(rover_mono
     gaussian_viewer    
     gaussian_mapper
     ${ORB_SLAM3_SOURCE_DIR}/lib/libORB_SLAM3.so)
 
-# Stihl RGBD
-add_executable(stihl_rgbd examples/stihl_rgbd.cpp)
-target_link_libraries(stihl_rgbd
+# ROVER RGBD
+add_executable(rover_rgbd examples/rover_rgbd.cpp)
+target_link_libraries(rover_rgbd
     gaussian_viewer    
     gaussian_mapper
     ${ORB_SLAM3_SOURCE_DIR}/lib/libORB_SLAM3.so)
