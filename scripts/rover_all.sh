@@ -10,21 +10,21 @@ for date in "${dates[@]}"; do
     for trial in "${trials[@]}"; do
         echo "  Trial: $trial"
 
-        ../bin/stihl_mono \
+        ../bin/rover_mono \
             ../ORB-SLAM3/Vocabulary/ORBvoc.txt \
-            ../cfg/ORB_SLAM3/Monocular/Stihl/d435i.yaml \
-            ../cfg/gaussian_mapper/Monocular/Stihl/stihl_mono.yaml \
-            /workspace/mounted_directory/media/fabian/data_recording_r/kwald/drosselweg/flaeche1/$date/tum/d435i \
-            ../results/short/mono/$date/$trial \
+            ../cfg/ORB_SLAM3/Monocular/ROVER/d435i.yaml \
+            ../cfg/gaussian_mapper/Monocular/ROVER/rover_mono.yaml \
+            /workspace/mounted_directory/media/$date/d435i \
+            ../results/mono/$date/$trial \
             no_viewer
 
-        ../bin/stihl_rgbd \
+        ../bin/rover_rgbd \
             ../ORB-SLAM3/Vocabulary/ORBvoc.txt \
-            ../cfg/ORB_SLAM3/RGB-D/Stihl/d435i.yaml \
-            ../cfg/gaussian_mapper/RGB-D/Stihl/stihl_rgbd.yaml \
-            /workspace/mounted_directory/media/fabian/data_recording_r/kwald/drosselweg/flaeche1/$date/tum/d435i \
-            ../cfg/ORB_SLAM3/RGB-D/Stihl/associations/$date.txt \
-            ../results/short/rgbd/$date/$trial \
+            ../cfg/ORB_SLAM3/RGB-D/ROVER/d435i.yaml \
+            ../cfg/gaussian_mapper/RGB-D/ROVER/rover_rgbd.yaml \
+            /workspace/mounted_directory/media/$date/d435i \
+            /workspace/mounted_directory/media/$date/d435i/associations.txt \
+            ../results/rgbd/$date/$trial \
             no_viewer
     done
 done
